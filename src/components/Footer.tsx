@@ -47,7 +47,9 @@ export default function Footer() {
               [x]
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="https://x.com/messages/compose?recipient_id=daiki_yamamoto"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
             >
               [mail]
