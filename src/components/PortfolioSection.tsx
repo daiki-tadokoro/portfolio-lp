@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "不動産ポータルアプリ",
-    description: "450万DL突破のお部屋探しアプリ「カナリー」のフロントエンド開発。React Native/Expoでのモバイルアプリ開発、Redux Toolkit、Firebase連携を担当。",
+    description: "累計450万DL超のお部屋探しアプリのフロントエンド開発。React Native/Expoでのモバイルアプリ開発、Redux Toolkit、Firebase連携を担当。",
     tags: ["React Native", "Expo", "TypeScript", "Redux Toolkit", "Firebase"],
     role: "Frontend Engineer",
   },
