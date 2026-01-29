@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Social */}
           <div className="flex justify-center md:justify-end gap-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/daiki-tadokoro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
@@ -42,12 +42,12 @@ export default function Footer() {
               [gh]
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/daiki_tadokoro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
             >
-              [tw]
+              [x]
             </a>
             <a
               href="mailto:contact@example.com"

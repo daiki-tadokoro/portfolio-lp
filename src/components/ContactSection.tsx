@@ -107,7 +107,7 @@ export default function ContactSection() {
           </p>
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com/"
+              href="https://github.com/daiki-tadokoro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
@@ -115,12 +115,12 @@ export default function ContactSection() {
               [GitHub]
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/daiki_tadokoro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
             >
-              [Twitter]
+              [X]
             </a>
             <a
               href="mailto:contact@example.com"
