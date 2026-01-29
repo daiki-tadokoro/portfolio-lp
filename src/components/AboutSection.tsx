@@ -40,19 +40,18 @@ export default function AboutSection() {
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         {/* Left: Bio */}
         <div>
-          {/* Profile Image */}
-          <div className="mb-6 relative">
-            <div className="relative w-full aspect-[4/3] overflow-hidden rounded border border-gray-700">
-              <Image
-                src="/profile.jpg"
-                alt="Daiki Yamamoto"
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-              />
-            </div>
-          </div>
-
           <div className="card mb-6">
+            {/* Profile Image */}
+            <div className="float-right ml-4 mb-2">
+              <div className="relative w-24 h-24 overflow-hidden rounded border border-gray-700">
+                <Image
+                  src="/profile.jpg"
+                  alt="Daiki Yamamoto"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
             <div className="flex items-center gap-2 mb-4 text-muted font-mono text-sm">
               <span className="w-3 h-3 rounded-full bg-red-500"></span>
               <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
