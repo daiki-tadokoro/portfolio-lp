@@ -57,9 +57,14 @@ export default function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="#contact" className="btn-primary">
+          <a
+            href="https://x.com/messages/compose?recipient_id=daiki_tadokoro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             Contact_
-          </Link>
+          </a>
           <Link href="#portfolio" className="btn-outline">
             View_Works
           </Link>
