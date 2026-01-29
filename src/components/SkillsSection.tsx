@@ -7,12 +7,12 @@ const skillCategories = [
   {
     title: "Backend",
     command: "ls ./backend",
-    skills: ["Go", "Node.js", "Python", "PostgreSQL", "GraphQL"],
+    skills: ["Go", "Node.js", "PostgreSQL", "GraphQL", "REST API"],
   },
   {
     title: "Infrastructure",
     command: "ls ./infra",
-    skills: ["AWS", "Docker", "CloudFormation", "Lambda", "ECS"],
+    skills: ["AWS", "Docker", "Terraform", "Datadog", "ECS"],
   },
 ];
 
@@ -22,7 +22,7 @@ const aiTools = [
 
 const tools = [
   "Git", "GitHub", "Vercel", "Firebase", "Redis",
-  "DynamoDB", "Slack API", "REST API", "CI/CD", "Linux"
+  "DynamoDB", "Slack API", "CI/CD", "Linux"
 ];
 
 export default function SkillsSection() {
