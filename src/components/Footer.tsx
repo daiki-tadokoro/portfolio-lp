@@ -39,7 +39,7 @@ export default function Footer() {
               [gh]
             </a>
             <a
-              href="https://x.com/daiki_yamamoto"
+              href="https://x.com/daiki_tadokoro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
@@ -47,7 +47,7 @@ export default function Footer() {
               [x]
             </a>
             <a
-              href="https://x.com/messages/compose?recipient_id=daiki_yamamoto"
+              href="https://x.com/messages/compose?recipient_id=daiki_tadokoro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary font-mono text-sm transition-colors"
