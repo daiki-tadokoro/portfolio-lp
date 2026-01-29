@@ -8,14 +8,14 @@ const projects = [
   {
     title: "店舗管理ダッシュボード",
     description: "飲食店オーナー向け管理画面。売上分析、商品管理、要望欄機能などを実装。UX改善とパフォーマンス最適化を担当。",
-    tags: ["React", "TypeScript", "Go", "CloudFormation"],
+    tags: ["React", "TypeScript", "Go", "AWS"],
     role: "Frontend Lead",
   },
   {
-    title: "保険プラットフォーム基盤",
-    description: "InsurTechスタートアップでのバックエンド開発。API Gateway、認証基盤、AWS Lambda を活用したサーバーレスアーキテクチャ。",
-    tags: ["AWS", "Lambda", "DynamoDB", "API Gateway"],
-    role: "Backend Engineer",
+    title: "保険申込フォーム",
+    description: "InsurTechスタートアップでのフロントエンド開発。保険商品の申込フォーム設計・実装。バリデーション、UX改善、デザイン調整を担当。",
+    tags: ["React", "TypeScript", "Zod", "Form Design"],
+    role: "Frontend Engineer",
   },
   {
     title: "Slack連携ツール",
