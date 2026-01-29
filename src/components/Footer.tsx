@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-muted font-mono text-xs">
-            <span className="text-secondary">$</span> echo &quot;© {currentYear} Daiki Tadokoro&quot;
+            <span className="text-secondary">$</span> echo &quot;© {currentYear} Daiki Yamamoto&quot;
           </p>
         </div>
       </div>

@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Daiki Tadokoro | Engineer",
+  title: "Daiki Yamamoto | Engineer",
   description:
-    "フリーランスエンジニア Daiki Tadokoro のポートフォリオサイト。Web開発、システム設計など幅広いサービスを提供しています。",
+    "フリーランスエンジニア Daiki Yamamoto のポートフォリオサイト。Web開発、システム設計など幅広いサービスを提供しています。",
   keywords: [
     "フリーランス",
     "エンジニア",

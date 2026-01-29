@@ -24,7 +24,7 @@ export default function HeroSection() {
         {/* Name with glow effect */}
         <h1 className="text-4xl md:text-6xl font-bold mb-4 font-mono">
           <span className="text-light">Daiki</span>{" "}
-          <span className="text-primary glow-text">Tadokoro</span>
+          <span className="text-primary glow-text">Yamamoto</span>
         </h1>
 
         {/* Title */}

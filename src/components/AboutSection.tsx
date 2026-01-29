@@ -48,7 +48,7 @@ export default function AboutSection() {
 
             <div className="font-mono text-sm leading-relaxed space-y-4">
               <p className="text-light">
-                <span className="text-secondary">#</span> Daiki Tadokoro
+                <span className="text-secondary">#</span> Daiki Yamamoto
               </p>
               <p className="text-muted">
                 フリーランスのフルスタックエンジニア。
