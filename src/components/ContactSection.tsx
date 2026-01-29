@@ -2,6 +2,14 @@
 
 import { useState } from "react";
 
+// TODO: Replace with your Google Form details
+const GOOGLE_FORM_ACTION = "YOUR_GOOGLE_FORM_ACTION_URL";
+const GOOGLE_FORM_ENTRIES = {
+  name: "entry.YOUR_NAME_ENTRY_ID",
+  email: "entry.YOUR_EMAIL_ENTRY_ID",
+  message: "entry.YOUR_MESSAGE_ENTRY_ID",
+};
+
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,20 +23,23 @@ export default function ContactSection() {
     setStatus("sending");
 
     try {
-      const response = await fetch("/api/contact", {
+      const formBody = new URLSearchParams();
+      formBody.append(GOOGLE_FORM_ENTRIES.name, formData.name);
+      formBody.append(GOOGLE_FORM_ENTRIES.email, formData.email);
+      formBody.append(GOOGLE_FORM_ENTRIES.message, formData.message);
+
+      await fetch(GOOGLE_FORM_ACTION, {
         method: "POST",
+        mode: "no-cors",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(formData),
+        body: formBody.toString(),
       });
 
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
+      // Google Forms doesn't return success status in no-cors mode
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
     } catch {
       setStatus("error");
     }
