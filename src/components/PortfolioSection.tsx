@@ -1,27 +1,27 @@
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Next.js + Stripe のフルスタックECサイト。決済、在庫管理、管理画面を実装。",
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    status: "completed",
+    title: "フードデリバリーSaaS",
+    description: "飲食店向けデリバリー管理プラットフォーム。注文管理、配達設定、メニュー管理機能を開発。Go + React/TypeScriptでのフルスタック開発。",
+    tags: ["Go", "React", "TypeScript", "AWS", "PostgreSQL"],
+    role: "Fullstack Engineer",
   },
   {
-    title: "SaaS Dashboard",
-    description: "リアルタイムデータ可視化の管理画面。GraphQL API、認証基盤を構築。",
-    tags: ["React", "Node.js", "GraphQL", "AWS"],
-    status: "completed",
+    title: "店舗管理ダッシュボード",
+    description: "飲食店オーナー向け管理画面。売上分析、商品管理、要望欄機能などを実装。UX改善とパフォーマンス最適化を担当。",
+    tags: ["React", "TypeScript", "Go", "CloudFormation"],
+    role: "Frontend Lead",
   },
   {
-    title: "Booking System",
-    description: "予約管理システム。カレンダー連携、自動リマインダー、顧客管理機能。",
-    tags: ["Vue.js", "Firebase", "Cloud Functions"],
-    status: "completed",
+    title: "保険プラットフォーム基盤",
+    description: "InsurTechスタートアップでのバックエンド開発。API Gateway、認証基盤、AWS Lambda を活用したサーバーレスアーキテクチャ。",
+    tags: ["AWS", "Lambda", "DynamoDB", "API Gateway"],
+    role: "Backend Engineer",
   },
   {
-    title: "Automation Tool",
-    description: "ワークフロー自動化ツール。Slack連携、レポート自動生成機能。",
-    tags: ["Python", "FastAPI", "Docker"],
-    status: "completed",
+    title: "Slack連携ツール",
+    description: "Slack APIを活用した社内ツール開発。スタンプランキング、チャンネル分析機能を実装。",
+    tags: ["Go", "Slack API", "REST API"],
+    role: "Solo Developer",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function PortfolioSection() {
                 <span className="w-2 h-2 rounded-full bg-green-500"></span>
                 <span className="ml-2 text-muted font-mono text-xs">project_{index + 1}</span>
               </div>
-              <span className="text-xs font-mono text-primary">[{project.status}]</span>
+              <span className="text-xs font-mono text-secondary">[{project.role}]</span>
             </div>
 
             {/* Project info */}

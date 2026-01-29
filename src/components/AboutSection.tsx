@@ -1,24 +1,24 @@
 const stats = [
   { label: "Years Exp", value: "5+", icon: "⌛" },
-  { label: "Projects", value: "50+", icon: "📁" },
-  { label: "Commits", value: "10k+", icon: "⚡" },
+  { label: "PRs Merged", value: "500+", icon: "🔀" },
+  { label: "Commits", value: "3k+", icon: "⚡" },
 ];
 
 const values = [
   {
-    title: "Clean Code",
-    description: "読みやすく、保守しやすいコードを書く。技術的負債は作らない。",
+    title: "Backend Architecture",
+    description: "GoでのAPI設計・開発。認証基盤からビジネスロジックまで一貫して対応。",
     icon: "{ }",
   },
   {
-    title: "Fast Delivery",
-    description: "スピード重視。でも品質は落とさない。",
-    icon: ">>",
+    title: "Frontend Development",
+    description: "React/TypeScriptでの管理画面・Webアプリ開発。UX重視の実装。",
+    icon: "< >",
   },
   {
-    title: "Problem Solver",
-    description: "技術で課題を解決する。それがエンジニアの仕事。",
-    icon: "//",
+    title: "Cloud Infrastructure",
+    description: "AWS上でのインフラ構築・運用。CloudFormation、Lambda、ECSなど。",
+    icon: ">>",
   },
 ];
 
@@ -52,18 +52,20 @@ export default function AboutSection() {
               </p>
               <p className="text-muted">
                 フリーランスのフルスタックエンジニア。
-                スタートアップから大企業まで、様々なプロジェクトに参画。
+                InsurTech、FoodTech領域でのプロダクト開発に従事。
               </p>
               <p className="text-muted">
-                技術選定から設計、実装、運用まで一貫して対応可能。
-                特にWebアプリケーション開発とシステムアーキテクチャが得意。
+                <span className="text-primary">@</span> InsurTechスタートアップ - 保険プラットフォームのバックエンド開発・AWS基盤構築
               </p>
               <p className="text-muted">
-                <span className="text-primary">{">"}</span> 新しい技術を学ぶのが好き。
+                <span className="text-primary">@</span> FoodTechスタートアップ - デリバリーSaaSのフルスタック開発（Go/React/TypeScript）
+              </p>
+              <p className="text-muted mt-4">
+                <span className="text-primary">{">"}</span> 設計から実装、運用まで一貫して対応
                 <br />
-                <span className="text-primary">{">"}</span> 問題解決が好き。
+                <span className="text-primary">{">"}</span> チーム開発でのコードレビュー、技術選定
                 <br />
-                <span className="text-primary">{">"}</span> 良いプロダクトを作るのが好き。
+                <span className="text-primary">{">"}</span> 新機能のリリースサイクルを回し続ける
               </p>
             </div>
           </div>
