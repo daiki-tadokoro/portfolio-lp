@@ -26,9 +26,6 @@ export default function Footer() {
             <Link href="#portfolio" className="text-muted hover:text-primary font-mono text-sm transition-colors">
               Works
             </Link>
-            <Link href="#contact" className="text-muted hover:text-primary font-mono text-sm transition-colors">
-              Contact
-            </Link>
           </div>
 
           {/* Social */}

@@ -7,7 +7,6 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Works", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -35,9 +34,6 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link href="#contact" className="btn-outline text-xs py-2 px-4">
-              Contact_
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,13 +59,6 @@ export default function Header() {
                 {">"} {item.label}
               </Link>
             ))}
-            <Link
-              href="#contact"
-              className="block mt-4 btn-outline text-center text-xs py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact_
-            </Link>
           </div>
         )}
       </nav>
