@@ -14,7 +14,7 @@ const values = [
   },
   {
     title: "Backend & Infra",
-    description: "Go/Node.jsでのAPI開発、AWS上でのインフラ構築・運用。",
+    description: "Go/Node.jsでのAPI開発、AWS上でのインフラ運用。",
     icon: "{ }",
   },
   {
@@ -68,7 +68,7 @@ export default function AboutSection() {
                 InsurTech、FoodTech領域でのプロダクト開発に従事。
               </p>
               <p className="text-muted">
-                <span className="text-primary">@</span> InsurTechスタートアップ - 保険プラットフォームのフロントエンド開発・AWS基盤構築
+                <span className="text-primary">@</span> InsurTechスタートアップ - 保険プラットフォームのフロントエンド開発・AI基盤構築
               </p>
               <p className="text-muted">
                 <span className="text-primary">@</span> FoodTechスタートアップ - デリバリーSaaSのフルスタック開発（Go/React/TypeScript）
