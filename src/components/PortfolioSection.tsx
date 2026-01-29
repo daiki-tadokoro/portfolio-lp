@@ -18,10 +18,10 @@ const projects = [
     role: "Frontend Engineer",
   },
   {
-    title: "Slack連携ツール",
-    description: "Slack APIを活用した社内ツール開発。スタンプランキング、チャンネル分析機能を実装。",
-    tags: ["Go", "Slack API", "REST API"],
-    role: "Solo Developer",
+    title: "不動産ポータルアプリ",
+    description: "450万DL突破のお部屋探しアプリ「カナリー」のフロントエンド開発。React Native/Expoでのモバイルアプリ開発、Redux Toolkit、Firebase連携を担当。",
+    tags: ["React Native", "Expo", "TypeScript", "Redux Toolkit", "Firebase"],
+    role: "Frontend Engineer",
   },
 ];
 
