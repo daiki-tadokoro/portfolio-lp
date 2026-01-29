@@ -20,7 +20,7 @@ export default function Header() {
             href="/"
             className="font-mono font-bold text-primary hover:glow-text transition-all"
           >
-            {"<DT />"}
+            {"<DY />"}
           </Link>
 
           {/* Desktop Navigation */}

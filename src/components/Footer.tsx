@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Brand */}
           <div>
-            <div className="font-mono text-primary font-bold mb-2">{"<DT />"}</div>
+            <div className="font-mono text-primary font-bold mb-2">{"<DY />"}</div>
             <p className="text-muted font-mono text-sm">
               Fullstack Engineer
             </p>
