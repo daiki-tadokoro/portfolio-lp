@@ -14,7 +14,7 @@ const values = [
   },
   {
     title: "Backend & Infra",
-    description: "Go/Node.jsでのAPI開発、AWS上でのインフラ運用。",
+    description: "Go/Node.jsでのAPI開発、AWSインフラ運用、Datadog Terraform化。",
     icon: "{ }",
   },
   {
