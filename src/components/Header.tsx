@@ -7,6 +7,7 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Works", href: "#portfolio" },
+  { label: "Contact", href: "https://x.com/messages/compose?recipient_id=daiki_tadokoro", external: true },
 ];
 
 export default function Header() {
@@ -25,15 +26,27 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-muted hover:text-primary font-mono text-sm transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              "external" in item && item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted hover:text-primary font-mono text-sm transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-muted hover:text-primary font-mono text-sm transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -49,16 +62,29 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-800">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block py-2 text-muted hover:text-primary font-mono text-sm"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {">"} {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              "external" in item && item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block py-2 text-muted hover:text-primary font-mono text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {">"} {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block py-2 text-muted hover:text-primary font-mono text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {">"} {item.label}
+                </Link>
+              )
+            )}
           </div>
         )}
       </nav>

@@ -26,6 +26,14 @@ export default function Footer() {
             <Link href="#portfolio" className="text-muted hover:text-primary font-mono text-sm transition-colors">
               Works
             </Link>
+            <a
+              href="https://x.com/messages/compose?recipient_id=daiki_tadokoro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-primary font-mono text-sm transition-colors"
+            >
+              Contact
+            </a>
           </div>
 
           {/* Social */}
