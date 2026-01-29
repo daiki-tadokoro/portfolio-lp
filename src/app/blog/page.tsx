@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts, getReadingTime, formatDate } from "@/lib/posts";
 
 export const metadata = {
@@ -41,24 +42,40 @@ export default function BlogPage() {
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <article className="card hover:border-primary/50 transition-all cursor-pointer">
-                  <div className="flex items-center justify-between mb-3">
-                    <time className="text-xs font-mono text-muted">
-                      {formatDate(post.date)} · {getReadingTime(post.content)} min
-                    </time>
-                  </div>
-                  <h2 className="text-lg font-mono font-bold text-light mb-2 group-hover:text-primary">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm font-mono text-muted mb-4">{post.excerpt}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs font-mono text-secondary"
-                      >
-                        #{tag}
-                      </span>
-                    ))}
+                  <div className="flex gap-4">
+                    {/* Thumbnail */}
+                    {post.thumbnail && (
+                      <div className="flex-shrink-0 w-32 h-20 relative overflow-hidden rounded border border-gray-800">
+                        <Image
+                          src={post.thumbnail}
+                          alt={post.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-2">
+                        <time className="text-xs font-mono text-muted">
+                          {formatDate(post.date)} · {getReadingTime(post.content)} min
+                        </time>
+                      </div>
+                      <h2 className="text-lg font-mono font-bold text-light mb-1 group-hover:text-primary truncate">
+                        {post.title}
+                      </h2>
+                      <p className="text-sm font-mono text-muted mb-2 line-clamp-2">{post.excerpt}</p>
+                      <div className="flex flex-wrap gap-1">
+                        {post.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs font-mono text-secondary"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </article>
               </Link>

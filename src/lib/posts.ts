@@ -1,3 +1,10 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const POSTS_DIR = path.join(process.cwd(), "content/posts");
+const CACHE_FILE = path.join(process.cwd(), ".thumbnail-cache.json");
+
 export type Post = {
   slug: string;
   title: string;
@@ -5,38 +12,63 @@ export type Post = {
   excerpt: string;
   content: string;
   tags: string[];
+  thumbnail?: string;
 };
 
-// ブログ記事はここに追加
-export const posts: Post[] = [
-  {
-    slug: "hello-world",
-    title: "ブログを始めました",
-    date: "2025-01-29",
-    excerpt: "エンジニアとしての学びや経験を発信していきます。",
-    content: `
-# ブログを始めました
+interface ThumbnailCache {
+  [slug: string]: {
+    hash: string;
+    thumbnail: string;
+  };
+}
 
-エンジニアとしての学びや経験を発信していきます。
-
-## 発信予定のトピック
-
-- 技術的な学び
-- プロジェクトの振り返り
-- ツールやライブラリの紹介
-
-よろしくお願いします。
-    `.trim(),
-    tags: ["日記"],
-  },
-];
+function loadThumbnailCache(): ThumbnailCache {
+  try {
+    if (fs.existsSync(CACHE_FILE)) {
+      return JSON.parse(fs.readFileSync(CACHE_FILE, "utf-8"));
+    }
+  } catch {
+    // Ignore cache errors
+  }
+  return {};
+}
 
 export function getAllPosts(): Post[] {
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const cache = loadThumbnailCache();
+
+  if (!fs.existsSync(POSTS_DIR)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".md"));
+
+  const posts = files.map((file) => {
+    const slug = file.replace(".md", "");
+    const filePath = path.join(POSTS_DIR, file);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { data, content } = matter(fileContent);
+
+    // Check for thumbnail in frontmatter or cache
+    const thumbnail = data.thumbnail || cache[slug]?.thumbnail;
+
+    return {
+      slug,
+      title: data.title || slug,
+      date: data.date ? new Date(data.date).toISOString().split("T")[0] : "",
+      excerpt: data.excerpt || "",
+      content: content.trim(),
+      tags: data.tags || [],
+      thumbnail,
+    } as Post;
+  });
+
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export function getPostBySlug(slug: string): Post | undefined {
-  return posts.find((post) => post.slug === slug);
+  return getAllPosts().find((post) => post.slug === slug);
 }
 
 export function getReadingTime(content: string): number {
