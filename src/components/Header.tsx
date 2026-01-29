@@ -7,6 +7,7 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Works", href: "#portfolio" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "https://x.com/messages/compose?recipient_id=daiki_tadokoro", external: true },
 ];
 
