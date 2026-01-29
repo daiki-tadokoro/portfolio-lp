@@ -8,12 +8,30 @@ export default function ContactSection() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent. I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (
@@ -94,9 +112,26 @@ export default function ContactSection() {
               />
             </div>
 
-            <button type="submit" className="w-full btn-primary">
-              <span className="text-dark">./send_message.sh</span>
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="w-full btn-primary disabled:opacity-50"
+            >
+              <span className="text-dark">
+                {status === "sending" ? "sending..." : "./send_message.sh"}
+              </span>
             </button>
+
+            {status === "success" && (
+              <p className="text-primary font-mono text-sm text-center mt-4">
+                Message sent successfully!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-500 font-mono text-sm text-center mt-4">
+                Failed to send. Please try again.
+              </p>
+            )}
           </form>
         </div>
 
