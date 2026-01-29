@@ -16,6 +16,10 @@ const skillCategories = [
   },
 ];
 
+const aiTools = [
+  "Claude Code", "GitHub Copilot", "Codex", "Cursor", "v0"
+];
+
 const tools = [
   "Git", "GitHub", "Vercel", "Firebase", "Redis",
   "DynamoDB", "Slack API", "REST API", "CI/CD", "Linux"
@@ -35,7 +39,7 @@ export default function SkillsSection() {
       </div>
 
       {/* Skill categories */}
-      <div className="grid md:grid-cols-3 gap-6 mb-12">
+      <div className="grid md:grid-cols-3 gap-6 mb-8">
         {skillCategories.map((category) => (
           <div key={category.title} className="card">
             {/* Terminal header */}
@@ -68,6 +72,26 @@ export default function SkillsSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* AI-Driven Development */}
+      <div className="card mb-8">
+        <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-800">
+          <span className="text-secondary font-mono text-sm">$</span>
+          <span className="text-muted font-mono text-sm">cat ./ai-driven-dev.txt</span>
+          <span className="ml-auto text-xs font-mono text-primary">[featured]</span>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {aiTools.map((tool) => (
+            <span
+              key={tool}
+              className="px-4 py-2 border border-primary/50 text-sm font-mono text-primary hover:bg-primary/10 transition-all cursor-default"
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
       </div>
 
       {/* Tools */}

@@ -6,19 +6,19 @@ const stats = [
 
 const values = [
   {
-    title: "Backend Architecture",
-    description: "GoでのAPI設計・開発。認証基盤からビジネスロジックまで一貫して対応。",
-    icon: "{ }",
-  },
-  {
     title: "Frontend Development",
     description: "React/TypeScriptでの管理画面・Webアプリ開発。UX重視の実装。",
     icon: "< >",
   },
   {
-    title: "Cloud Infrastructure",
-    description: "AWS上でのインフラ構築・運用。CloudFormation、Lambda、ECSなど。",
-    icon: ">>",
+    title: "AI-Driven Development",
+    description: "Claude Code、Copilot等を活用した高速開発。AIとの協働で生産性を最大化。",
+    icon: "AI",
+  },
+  {
+    title: "Backend & Infra",
+    description: "Go/Node.jsでのAPI開発、AWS上でのインフラ構築・運用。",
+    icon: "{ }",
   },
 ];
 
