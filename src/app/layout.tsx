@@ -12,9 +12,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Daiki Yamamoto | Engineer",
   description:
-    "フリーランスエンジニア Daiki Yamamoto のポートフォリオサイト。Web開発、システム設計など幅広いサービスを提供しています。",
+    "エンジニア Daiki Yamamoto のポートフォリオサイト。Web開発、システム設計など幅広いサービスを提供しています。",
   keywords: [
-    "フリーランス",
     "エンジニア",
     "Web開発",
     "システム開発",
@@ -22,6 +21,9 @@ export const metadata: Metadata = {
     "Next.js",
     "TypeScript",
   ],
+  verification: {
+    google: "Xt39zG-J2hls1GWg4ezXIAWwhItOPP0-AmgXS_j73hY",
+  },
 };
 
 export default function RootLayout({
