@@ -2,7 +2,7 @@ const skillCategories = [
   {
     title: "Frontend",
     command: "ls ./frontend",
-    skills: ["React", "Next.js", "TypeScript", "Vue.js", "Tailwind CSS"],
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     title: "Backend",
