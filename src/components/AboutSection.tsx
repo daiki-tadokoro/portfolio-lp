@@ -11,14 +11,14 @@ const values = [
     icon: "< >",
   },
   {
-    title: "AI-Driven Development",
-    description: "Claude Code、Copilot等を活用した高速開発。AIとの協働で生産性を最大化。",
-    icon: "AI",
-  },
-  {
     title: "Backend & Infra",
     description: "Go/Node.jsでのAPI開発、AWS上でのインフラ構築・運用。",
     icon: "{ }",
+  },
+  {
+    title: "AI-Driven Development",
+    description: "Claude Code、Copilot等を活用した高速開発。AIとの協働で生産性を最大化。",
+    icon: "AI",
   },
 ];
 
